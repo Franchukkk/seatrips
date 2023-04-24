@@ -1,0 +1,171 @@
+- 
+    let mainMenu = [
+        ["ГОловна", "#"],
+        ["послуги", "#"],
+        ["про компанію", "#"],
+        ["Акції", "#"],
+        ["Партнери", "#"],
+        ["відгуки", "#"],
+        ["Контакти", "#"],
+    ]
+
+-
+    let cardsInfo = {
+        bike: {
+            img: "img/bike.png",
+            alt: "bike",
+            title: "Тур на велосипедах",
+            price: 335,
+            isBest: false,
+            description: [
+                "Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.",
+            ],
+        },
+        island: {
+            img: "img/circle.png",
+            alt: "island",
+            title: "Екскурсія на острів",
+            price: 500,
+            isBest: true,
+            description: [
+                "Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .",
+            ], // added comma here
+        },
+        sOffer: {
+            img: "img/special-offer.png",
+            alt: "sOffer",
+            title: "Особливе замовлення",
+            price: 250,
+            isBest: true,
+            description: [
+                "Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші. "
+            ], // added comma here
+        },
+    }
+
+
+mixin cards(oneCard)
+    figure
+        figcaption
+            if oneCard.isBest
+                .best-offer
+            .blockImg.text-align-center.p-4
+                img(src=oneCard.img, alt=oneCard.alt)
+            h4.shortDesc.regular.text-align-center.m-0 #{oneCard.title}
+            span.d-flex.justify-content-center
+                p #{oneCard.price}
+                | грн *
+            .descriptionFigure
+                for oneText in oneCard.description 
+                    p #{oneText}
+mixin menu(menu, colorTheme="light")
+    .navigation
+        .container
+            .row.align-items-baseline
+                .col-2
+                    .logo
+                        img(src="../img/logo.png", alt="")
+                .col-10.d-md-none.d-lg-flex.d-none.justify-content-end
+                    nav
+                        ul.navigation-header.menu.d-flex.align-items-center(class=colorTheme)
+                            for item in menu 
+                                li 
+                                    a(href=item[1]) #{item[0]}
+                .burderBor
+                    .burger#burger
+                        span
+
+-
+    let cardsSpecialInfo = {
+        romantic: {
+            img: "img/romantic-trip.png",
+            alt: "romantic",
+            title: "Романтична подорож на 2",
+            price: 2599,
+            isBest: true,
+            description: [
+            "Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.",
+            ],
+    },
+        bikeTour: {
+            img: "img/bike-trip.png",
+            alt: "bike-trip",
+            title: "Велотур",
+            price: 555,
+            isBest: true,
+            description: [
+            "Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!",
+            ],
+    },
+        toIslands: {
+            img: "img/to-islands.png",
+            alt: "to-islands",
+            title: "На острови!",
+            price: 1559,
+            isBest: true,
+            description: [
+            "Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!",
+            ],
+    },
+        surfRide: {
+            img: "img/surfing.png",
+            alt: "surfing",
+            title: "Катання на сьорфінгу",
+            price: 999,
+            isBest: true,
+            description: [
+            "Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!",
+            ],
+    },
+    };
+
+mixin cardsSpecial(cardsSpecial)
+    div.card.rounded-0.border-0.figure-special
+        img.card-img-top(src=cardsSpecial.img, alt=cardsSpecial.alt)
+        div.card-body
+            if cardsSpecial.isBest
+                .best-offer
+            h5.card-title.regular #{cardsSpecial.title}
+            p.card-text
+                for Text in cardsSpecial.description 
+                    p.descriptionFigure.m-0  #{Text}
+            .d-flex    
+                p.blue-text.font-weight-normal #{cardsSpecial.price} 
+                    | грн
+                a.order(href="#") замовити
+-
+    let moreCards = {
+        workInfo: {
+            img: "img/more-information-house.jpg",
+            ico: "img/document.png",
+            alt: "document",
+            title: "Графік роботи готелів.xls",
+            fileWeight: "Розмір файла: 10Mb",
+            description: [
+                "Розклад роботи усіх наших готелів, можете знайти за цим посиланням. Та додатково завантажити їх фото.",
+            ],
+        },
+        foodInfo: {
+            img: "img/more-information-food.jpg",
+            ico: "img/document.png",
+            alt: "document",
+            title: "Інформація про харчування.xls",
+            fileWeight: "Розмір файла: 10Mb",
+            description: [
+                "У будь-якому нашому турі включені сніданки у вартість. Якщо ж бажаєте замовити додотково, то ознайомтесь з умовами.",
+            ],
+        },
+    };
+mixin moreCards(moreCards)
+    .card.text-bg-dark.more-details-cards
+        .card-img-overlay
+            .d-flex.card-top
+                .image
+                    img.document-image(src=moreCards.ico, alt=moreCards.alt)
+                .desc
+                    h5.card-title #{moreCards.title}
+                    p.descriptionFigure #{moreCards.fileWeight}
+            p.card-text.description-add-card #{moreCards.description}
+            a.download(href="#") скачати
+
+        

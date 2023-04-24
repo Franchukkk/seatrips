@@ -1,0 +1,466 @@
+@import components/mixins
+*
+    margin: 0
+    padding: 0
+
+body
+    font-family: "Rubik"
+    font-weight: 400
+    background-color: #f4f7f9
+a
+    display: inline-block
+.text-align-center
+    text-align: center
+.navigation-header 
+    column-gap: 30px
+    a
+        font-size: 14px
+        text-transform: uppercase
+        color: #fff
+        list-style: none
+        transition: 0.5s
+        text-decoration: none
+        &:hover
+            color: #ffb700
+
+header
+    padding-top: 34px
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 95%, rgba(#f5f8fa,1) 100%), url(../img/header.jpg) center
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    margin-bottom: 45px
+    padding-bottom: 43px
+    li
+        list-style-type: none
+    p
+        max-width: 550px
+        margin: 0 auto
+        font-size: 16px
+        line-height: 24px
+        color: #ffffff
+        font-style: italic
+        margin-bottom: 30px
+.header-center
+    position: relative
+    padding-bottom: 263px
+    &::after
+        content: ''
+        position: absolute
+        opacity: 0.2
+        width: 90%
+        max-width: 410px
+        height: 41px
+        border: 4px solid #ffffff
+        border-top: 0
+        top:50%
+        left:50%
+        margin-left: -205px 
+        top: 220px
+        height: 95px
+        display: none
+        +media(560)
+            display: inline-block
+a.btn
+    font-size: 16px
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: #fdfcfb
+    border-radius: 23px
+    filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
+    background-color: #ffb700
+    padding: 15px 32px
+    z-index: 1
+    position: relative
+.button-about-company
+    display: block
+    +media(435)
+        display: inline-block
+a.blue
+    +btn
+.navigation
+    margin-bottom: 125px
+h1
+    font-size: 60px
+    position: relative
+    letter-spacing: 1px
+    line-height: 1.5em
+    text-transform: uppercase
+    color: #ffffff
+    +media(465)
+        font-size: 72
+    &::before,&::after
+        content: ''
+        position: absolute
+        opacity: 0.2
+        width: 100%
+        max-width: 410px
+        height: 41px
+        border: 4px solid #ffffff
+        border-bottom: 0
+        top:50%
+        left:50%
+        margin-left: -205px 
+        display: none
+        top: -25px
+        +media(560)
+            display: inline-block
+.italic
+    font-size: 16px
+    color: #333333
+    font-style: italic
+a.slide-down 
+    width: 18px
+    height: 20px
+    background-image: url(../img/angles-down-solid.svg)
+    transition: 0.5s
+    &:hover
+        transform: scale(1.2)
+.regular
+    font-size: 18px
+    line-height: 26px
+    color: #333333
+    font-weight: 400
+    font-style: normal
+.figure-main-first
+    background-color: #f4f7f9
+    transition: 0.3s
+    &:hover:not(.figure-main-first:first-child)
+        filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
+    span
+        font-size: 24px
+        color: #0099ff
+.descriptionFigure
+    max-width: 229px
+    font-size: 13px
+    line-height: 19px
+    color: #999999
+    margin: auto
+.title-basic
+    font-size: 36px
+    letter-spacing: 1px
+    line-height: 40px
+    text-transform: uppercase
+    color: #333333
+    font-weight: 400
+.figure-about-us
+    p
+        font-size: 13px
+        line-height: 19px
+        color: #bbbbbb
+    .btn
+        margin-top: 48px
+        margin-bottom: 19px
+figure
+    position: relative
+.best-offer:before
+    content: ''
+    position: absolute
+    width: 0
+    height: 0
+    left: -12px
+    border-top: 61px solid #26cb15
+    border-right: 61px solid transparent
+.best-offer:after
+    content: ''
+    position: absolute
+    width: 17px
+    height: 16px
+    left: -12px
+    background-image: url(../img/star.png)
+    left: 0px
+    top: 10px
+hr
+    border: none
+    border-top: 2px solid #dfe3e6
+    margin-bottom: 74px
+    margin-top: 71px
+.img-island
+    margin: auto
+    width: 100%
+    min-height: 270px
+    background-image: url(../img/island-nopeople.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+.description-island
+    margin-bottom: 34px
+    padding-top: 14px
+.card-price-island
+    background-color: #edf1f4
+    min-height: 169px
+.blue-text
+    font-size: 24px
+    line-height: 44px
+    color: #0099ff
+.island-about 
+    margin-bottom: 80px
+.sailing
+    padding-top: 90px
+    min-height: 503px
+    background: linear-gradient(rgba(#142f3f, 82%), rgba(#142f3f, 82%)), url(../img/sea-surfing-background.jpg) center
+    background-size: cover
+    background-repeat: no-repeat
+    background-position-y: center
+    margin-bottom: 72px
+.sailing-descript
+    margin-bottom: 35px
+    h2 
+        font-size: 56px
+        letter-spacing: 2px
+        line-height: 66px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 400
+        +media(465)
+            font-size: 46px
+        p
+            color: #0099ff
+p.descript-sailing
+    color: #fff
+    font-family: "PT Sans"      
+    margin-bottom: 32px
+.quotes
+    position: relative
+    p.descript-sailing:first-child
+        padding-bottom: 17px !important
+.quotes:before,.quotes:after
+    content:''
+    display: none
+    position: absolute
+    width: 200px
+    height: 235px
+    border: 4px solid #ffffff
+    opacity: 0.2
+    +media(560)
+        display: inline-block
+.quotes:before   
+    border-right: 0
+    left: 0
+.quotes:after
+    border-left: 0
+    top: 8px
+    right: 0
+.client
+    width: 86px
+    height: 86px
+    border-radius: 50%
+    background-image: url(../img/quotes-man.png)
+    margin: auto
+    margin-top: 10px
+.quotes-img
+    width: 43px
+    height: 39px
+    background-image: url(../img/quotes.png)
+    background-repeat: no-repeat
+    background-size: cover
+    margin: auto
+    margin-top: -17px
+.special-month-offer
+    .best-offer:before
+        left: 0px
+        top: 0
+    .best-offer:after
+        left: 10px
+        top: 10px
+.figure-special
+    max-width: 270px
+    min-height: 355px
+    background-color: transparent
+    transition: 0.5s
+    &:hover
+        background-color: #fff
+.more-information
+    margin-bottom: 80px
+.more-details-cards
+    max-width: 270px
+    min-height: 270px
+    margin: auto
+    &:first-child
+        background: linear-gradient(rgba(#142f3f, 75%), rgba(#142f3f, 75%)), url(../img/more-information-house.jpg)
+        background-position: center
+.more-food-card 
+    .more-details-cards
+        background: linear-gradient(rgba(#142f3f, 75%), rgba(#142f3f, 75%)), url(../img/more-information-food.jpg)
+        background-position: center
+.download
+    font-size: 12px
+    text-transform: uppercase
+    color: #ffb700
+    border-radius: 16px
+    background-color: rgba(255,183,0,0)
+    border: 2px solid #ffb700
+    text-decoration: none
+    padding: 4.5px 25px
+    transition: 0.5s
+    &:hover
+        transform: scale(1.05)
+    &::before
+        content: url(../img/cloud.png)
+        padding-right: 5px 
+.card-top
+    min-height: 75px
+.document-image
+    margin-right: 17px
+.description-add-card
+    min-height: 120px
+.card-add
+    text-align: center
+.ask-question 
+    max-width: 268px
+    margin: auto
+    position: relative
+    &:before,&:after
+        content: ''
+        position: absolute
+        width: 50px
+        height: 269px
+        border: 4px solid #ffb700
+    &:before
+        top: 17px
+        border-right: 0
+    &:after
+        top: 17px
+        border-left: 0
+        right: 0
+.ask-question
+    i
+        display: block
+        text-align: center
+        margin-bottom: 30px
+.ask-description
+    display: block
+    max-width: 150px
+    margin-bottom:10px
+.blue-text-ask
+    display: block
+    font-size: 18px
+    text-decoration: none
+    text-align: center
+.manager
+    background-image: url(../img/ask-question.png)
+.footer
+    min-height: 400px
+    background-image: url(../img/footer.jpg)
+    background-size: 100% 150%
+    background-position: center
+    background-repeat: no-repeat
+.copy
+    color: #ffffff
+    background-color: #1a1a1a
+    padding: 15px 0 3px 0
+.order
+    position: relative
+    color: #ffb700
+    text-decoration: none
+    text-transform: uppercase
+    top: 13px
+    right: -10%
+    &::before
+        content: ''
+        position: absolute
+        top: 5.5px
+        right: -16px
+        width: 12px
+        height: 12px
+        border: 2px solid #ffb700
+        border-radius: 50%
+    &:after
+        content: ''
+        position: absolute
+        top: 9px
+        right: -12px
+        width: 5px
+        height: 5px
+        border-bottom: 2px solid #ffb700
+        border-right: 2px solid #ffb700
+        transform: rotate(-45deg)
+    &:hover
+        text-decoration: underline
+.about-us-company-cards
+    .last-col
+        margin-bottom: 20px
+.cards-first-tours
+    max-height: 271px
+.look-all-plans
+    position: relative
+    text-decoration: none
+    font-size: 12px
+    text-transform: uppercase
+    color: #0099ff
+    &:after
+        content: ''
+        position: absolute
+        width: 5px
+        top: 6px
+        margin-left: 10px
+        height: 5px
+        border-bottom: 2px solid #0099ff
+        border-right: 2px solid #0099ff
+        transform: rotate(-45deg)
+    &:hover
+        text-decoration: underline
+.burderBor
+    z-index: 2
+    position: fixed
+    right: 4%
+    display: block
+    border: 2px solid #1147c3
+    background-color: #1147c3
+    border-radius: 5px
+    width: 35px
+    height: 35px
+    +media(992)
+        display: none
+.burger 
+    top: 14px
+    left: -8.5px
+    position: relative
+    display: block
+    width: 25px
+    right: 5%
+    +media(992)
+        display: none
+.menu-sm 
+    background-color: #fff
+    width: 100%
+    padding: 10px 15px
+    border-radius: 10px
+    position: fixed
+    display: none
+    z-index: 3
+    border: 4px solid #798DC6
+.burger span, .burger span:before, .burger span:after 
+    content: ""
+    position: absolute
+    background-color: #fff
+    width: 100%
+    height: 2px
+    transition: 0.3s
+
+.burger span:before 
+    top: -9px
+
+.burger span:after
+    bottom: -9px
+
+.active
+    display: block
+    padding: 0
+    padding-bottom: 8px
+    span
+        background-color: transparent
+
+div.active span::before
+    top: 0px
+    transform: rotate(45deg)
+    transition: 0.2s
+
+div.active span::after
+    bottom: 0px
+    transform: rotate(-45deg)
+    transition: 0.2s
+.visible
+    display: block
+.about-first-tour
+    column-gap: 5px
+    row-gap: 10px

@@ -1,0 +1,141 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="css/styles.css")
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    body 
+        include components/mixins       
+        header 
+            +menu(mainMenu)
+            .menu-sm 
+                ul.navigation-header 
+                    li 
+                        a ГОловна       
+                    li 
+                        a послуги       
+                    li 
+                        a про компанію       
+                    li 
+                        a Акції       
+                    li 
+                        a Партнери      
+                    li 
+                        a відгуки       
+                    li 
+                        a Контакти
+            .text-align-center.header-center
+                h1 Морські пригоди
+                p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                a.btn(href="#") детальніше
+            .text-align-center.header-bottom-center 
+                span.title-basic обери свій <br> план подорожі
+                p.italic Наша фірма -лідер на ринку у своїй сфері
+                a.slide-down(href="#plans")
+        main 
+            .container
+                .plans#plans
+                    .row.cards-first.about-us-company-cards
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.last-col
+                            figure.figure-about-us
+                                figcaption
+                                    h2.title-basic про нашу компанію
+                                    i.about-us-description.italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                                    a.btn.d-sm-block.d-lg-inline-block.button-about-company(href="#") детальніше
+                                    p * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours
+                            +cards(cardsInfo.bike)
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours
+                            +cards(cardsInfo.island)
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours
+                            +cards(cardsInfo.sOffer)
+                        a.text-align-center.d-inline.look-all-plans дивитись усі плани
+                    hr
+                .island-about 
+                    .row.g-4 
+                        .col-sm-12.col-md-12.col-lg-4.nopeople-island-img 
+                            .img-island.w-100
+                        .col-sm-12.col-md-12.col-lg-8.nopeople-island-img.description-about-island 
+                            h2.title-basic Дивовижний безлюдний острів, який зводить людей з розуму
+                            .row.g-3 
+                                .col-lg-8.col-sm-12
+                                    .description-island
+                                        i.italic Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                                    .d-flex.flex-wrap.about-first-tour
+                                        a.btn.order-tour(href="#") замовити тур
+                                        a.btn.blue(href="#") детальніше
+                                .col-lg-4.col-sm-12 
+                                    .card.border-0.card-price-island
+                                        .card-body.text-align-center
+                                            span.card-title.blue-text 575 грн./день
+                                            p.card-text.descriptionFigure.p-0 В дану вартість входить обслуговування персоналу, <br> вечеря і захоплюючі історії.
+            .sailing 
+                .container
+                    .row.g-3
+                        .col-md-12.col-lg-6.sailing-descript 
+                            h2 СПІЙМАЙ ХВИЛЮ
+                                p ЖИВИ ЯСКРАВО!
+                            p.descript-sailing Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                            a.btn(href="#") детальніше
+                        .col-md-12.col-lg-6
+                            .quotes.p-2 
+                                .quotes-img
+                                p.descript-sailing.p-4.m-0 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                                p.descript-sailing.m-0.text-align-center Олег Набережний 
+                                p.descriptionFigure.text-align-center клієнт 
+                                .client
+            .special-month-offer
+                .container
+                    .text-align-center
+                        h2.text-uppercase.title-basic Спеціальні пропозиції тижня
+                        p.italic Гарячі праозиції, по-швидше обирай і поїхали!
+                    .row.g-3 
+                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                            +cardsSpecial(cardsSpecialInfo.romantic)
+                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                            +cardsSpecial(cardsSpecialInfo.bikeTour)
+                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                            +cardsSpecial(cardsSpecialInfo.toIslands)
+                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                            +cardsSpecial(cardsSpecialInfo.surfRide)
+                    hr
+            .more-information 
+                .container
+                    .row.g-3
+                        .col-lg-3.col-md-6.col-sm-12.card-add
+                            h2.title-basic додаткова <br> інформація
+                        .col-lg-3.col-md-6.col-sm-12
+                            +moreCards(moreCards.workInfo)
+                        .col-lg-3.col-md-6.col-sm-12.more-food-card
+                            +moreCards(moreCards.foodInfo)
+                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-0
+                            .ask-question 
+                                i.regular задати питання
+                                small.descriptionFigure.ask-description Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання 
+                                a.blue-text.blue-text-ask(href="#") +38 (050) 56 98 511
+                                small.regular.text-align-center.d-block Анна Миколаївна
+                                small.descriptionFigure.text-align-center.d-block консультант
+                                .client.manager
+        footer 
+            .footer
+            .copy.text-align-center
+                p © 2016 Cars.com All rights reserved.
+        script(src='js/bootstrap.bundle.min.js')
+script.
+    const burger = document.querySelector('.burger'); // Змінено з getElementById на querySelector з класом '.burger'
+    const menu = document.querySelector('.menu-sm');
+    burger.addEventListener('click', function() {
+    burger.classList.toggle('active');
+    menu.classList.toggle('visible');
+    });
