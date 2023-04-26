@@ -18,7 +18,7 @@ html(lang="en")
     body 
         include components/mixins       
         header 
-            .container
+            .container.container-2100
                 +menu(mainMenu)
                 .menu-sm.d-lg-none
                     ul.navigation-header.m-0
@@ -45,7 +45,7 @@ html(lang="en")
                     p.italic Наша фірма -лідер на ринку у своїй сфері
                     a.slide-down(href="#plans")
         main 
-            .container
+            .container.container-2100
                 .plans#plans
                     .row.cards-first.about-us-company-cards.justify-content-between
                         .col-sm-12.col-md-6.col-lg-3.figure-main-first.last-col.width-95
@@ -85,7 +85,7 @@ html(lang="en")
                                             span.card-title.blue-text 575 грн./день
                                             p.card-text.descriptionFigure.p-0 В дану вартість входить обслуговування персоналу, <br> вечеря і захоплюючі історії.
             .sailing 
-                .container
+                .container.container-2100
                     .row.g-3
                         .col-md-12.col-lg-6.sailing-descript 
                             h2 СПІЙМАЙ ХВИЛЮ
@@ -100,7 +100,7 @@ html(lang="en")
                                 p.descriptionFigure.text-align-center клієнт 
                                 .client
             .special-month-offer
-                .container
+                .container.container-2100
                     .text-align-center
                         h2.text-uppercase.title-basic Спеціальні пропозиції тижня
                         p.italic Гарячі праозиції, по-швидше обирай і поїхали!
@@ -115,7 +115,7 @@ html(lang="en")
                             +cardsSpecial(cardsSpecialInfo.surfRide)
                     hr
             .more-information 
-                .container
+                .container.container-2100
                     .row.g-4
                         .col-lg-3.col-md-6.col-sm-12.card-add
                             h2.title-basic додаткова <br> інформація
@@ -123,7 +123,7 @@ html(lang="en")
                             +moreCards(moreCards.workInfo)
                         .col-lg-3.col-md-6.col-sm-12.more-food-card
                             +moreCards(moreCards.foodInfo)
-                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-lg-0
+                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-lg-0.more-food-card-padding
                             .ask-question 
                                 i.regular задати питання
                                 small.descriptionFigure.ask-description Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання 
@@ -139,7 +139,9 @@ html(lang="en")
 script.
     const burger = document.querySelector('.burger'); // Змінено з getElementById на querySelector з класом '.burger'
     const menu = document.querySelector('.menu-sm');
+    const logo = document.querySelector('.logo');
     burger.addEventListener('click', function() {
     burger.classList.toggle('active');
     menu.classList.toggle('visible');
+    logo.classList.toggle('logo-z-index')
     });
