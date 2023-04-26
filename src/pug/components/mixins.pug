@@ -121,15 +121,15 @@ mixin menu(menu, colorTheme="light")
 
 mixin cardsSpecial(cardsSpecial)
     div.card.rounded-0.border-0.figure-special
-        img.card-img-top(src=cardsSpecial.img, alt=cardsSpecial.alt)
+        img.card-img-top.rounded-0(src=cardsSpecial.img, alt=cardsSpecial.alt)
         div.card-body
             if cardsSpecial.isBest
                 .best-offer
             h5.card-title.regular #{cardsSpecial.title}
             p.card-text
                 for Text in cardsSpecial.description 
-                    p.descriptionFigure.m-0  #{Text}
-            .d-flex    
+                    p.descriptionFigure.m-0.text-special-offer  #{Text}
+            .d-flex.order-flex-bottom    
                 p.blue-text.font-weight-normal #{cardsSpecial.price} 
                     | грн
                 a.order(href="#") замовити
@@ -157,7 +157,7 @@ mixin cardsSpecial(cardsSpecial)
         },
     };
 mixin moreCards(moreCards)
-    .card.text-bg-dark.more-details-cards
+    .card.text-bg-dark.more-details-cards.rounded-0
         .card-img-overlay
             .d-flex.card-top
                 .image
@@ -165,7 +165,7 @@ mixin moreCards(moreCards)
                 .desc
                     h5.card-title #{moreCards.title}
                     p.descriptionFigure #{moreCards.fileWeight}
-            p.card-text.description-add-card #{moreCards.description}
+            p.card-text.descriptionFigure.m-0.description-add-info #{moreCards.description}
             a.download(href="#") скачати
 
         

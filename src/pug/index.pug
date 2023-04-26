@@ -18,49 +18,53 @@ html(lang="en")
     body 
         include components/mixins       
         header 
-            +menu(mainMenu)
-            .menu-sm 
-                ul.navigation-header 
-                    li 
-                        a ГОловна       
-                    li 
-                        a послуги       
-                    li 
-                        a про компанію       
-                    li 
-                        a Акції       
-                    li 
-                        a Партнери      
-                    li 
-                        a відгуки       
-                    li 
-                        a Контакти
-            .text-align-center.header-center
-                h1 Морські пригоди
-                p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-                a.btn(href="#") детальніше
-            .text-align-center.header-bottom-center 
-                span.title-basic обери свій <br> план подорожі
-                p.italic Наша фірма -лідер на ринку у своїй сфері
-                a.slide-down(href="#plans")
+            .container
+                +menu(mainMenu)
+                .menu-sm.d-lg-none
+                    ul.navigation-header.m-0
+                        li 
+                            a ГОловна       
+                        li 
+                            a послуги       
+                        li 
+                            a про компанію       
+                        li 
+                            a Акції       
+                        li 
+                            a Партнери      
+                        li 
+                            a відгуки       
+                        li 
+                            a Контакти
+                .text-align-center.header-center
+                    h1 Морські пригоди
+                    p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                    a.btn(href="#") детальніше
+                .text-align-center.header-bottom-center 
+                    span.title-basic обери свій <br> план подорожі
+                    p.italic Наша фірма -лідер на ринку у своїй сфері
+                    a.slide-down(href="#plans")
         main 
             .container
                 .plans#plans
-                    .row.cards-first.about-us-company-cards
-                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.last-col
+                    .row.cards-first.about-us-company-cards.justify-content-between
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.last-col.width-95
                             figure.figure-about-us
                                 figcaption
                                     h2.title-basic про нашу компанію
                                     i.about-us-description.italic Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
                                     a.btn.d-sm-block.d-lg-inline-block.button-about-company(href="#") детальніше
                                     p * - зверніть увагу, зміна ціни може залежати від курсу долара.
-                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours.width-95
                             +cards(cardsInfo.bike)
-                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours.width-95
                             +cards(cardsInfo.island)
-                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours
+                        .col-sm-12.col-md-6.col-lg-3.figure-main-first.cards-first-tours.width-95
                             +cards(cardsInfo.sOffer)
-                        a.text-align-center.d-inline.look-all-plans дивитись усі плани
+                    .row 
+                        .col-3.
+                        .col-lg-9.text-align-center.col-sm-12.col-md-12
+                            a(href="#").text-align-center.d-inline.look-all-plans дивитись усі плани
                     hr
                 .island-about 
                     .row.g-4 
@@ -112,14 +116,14 @@ html(lang="en")
                     hr
             .more-information 
                 .container
-                    .row.g-3
+                    .row.g-4
                         .col-lg-3.col-md-6.col-sm-12.card-add
                             h2.title-basic додаткова <br> інформація
                         .col-lg-3.col-md-6.col-sm-12
                             +moreCards(moreCards.workInfo)
                         .col-lg-3.col-md-6.col-sm-12.more-food-card
                             +moreCards(moreCards.foodInfo)
-                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-0
+                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-lg-0
                             .ask-question 
                                 i.regular задати питання
                                 small.descriptionFigure.ask-description Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання 

@@ -21,15 +21,23 @@ a
         transition: 0.5s
         text-decoration: none
         &:hover
-            color: #ffb700
-
+            color: #ffb700   
 header
     padding-top: 34px
     background: linear-gradient(to bottom,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 95%, rgba(#f5f8fa,1) 100%), url(../img/header.jpg) center
     background-repeat: no-repeat
-    background-size: 100% 100%
-    margin-bottom: 45px
+    background-size: 260% 100%
     padding-bottom: 43px
+    +media(620)
+        background-size: 210% 100%
+    +media(800)
+        background-size: 150% 100%
+    +media(1100)
+        background-size: 100% 100%
+    +media(1440)
+        background-size: 100% 110%
+    +media(2080)
+        background-size: 100% 140%
     li
         list-style-type: none
     p
@@ -68,9 +76,12 @@ a.btn
     border-radius: 23px
     filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
     background-color: #ffb700
-    padding: 15px 32px
+    padding: 10px 33px
     z-index: 1
     position: relative
+    &:hover
+        background-color: #fff
+        color: #000
 .button-about-company
     display: block
     +media(435)
@@ -87,7 +98,7 @@ h1
     text-transform: uppercase
     color: #ffffff
     +media(465)
-        font-size: 72
+        font-size: 72px
     &::before,&::after
         content: ''
         position: absolute
@@ -135,6 +146,8 @@ a.slide-down
     line-height: 19px
     color: #999999
     margin: auto
+.order-flex-bottom
+    position: relative
 .title-basic
     font-size: 36px
     letter-spacing: 1px
@@ -142,6 +155,9 @@ a.slide-down
     text-transform: uppercase
     color: #333333
     font-weight: 400
+.width-95
+    max-width: 272px
+    margin: 0 auto
 .figure-about-us
     p
         font-size: 13px
@@ -220,6 +236,7 @@ p.descript-sailing
     font-family: "PT Sans"      
     margin-bottom: 32px
 .quotes
+    text-align: center
     position: relative
     p.descript-sailing:first-child
         padding-bottom: 17px !important
@@ -247,6 +264,7 @@ p.descript-sailing
     background-image: url(../img/quotes-man.png)
     margin: auto
     margin-top: 10px
+    margin-bottom: 20px
 .quotes-img
     width: 43px
     height: 39px
@@ -340,21 +358,32 @@ p.descript-sailing
     background-image: url(../img/ask-question.png)
 .footer
     min-height: 400px
-    background-image: url(../img/footer.jpg)
-    background-size: 100% 150%
-    background-position: center
+    background: linear-gradient(to top,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 95%, rgba(#f5f8fa,1) 100%), url(../img/footer.jpg) center
+    background-size: 260% 150%
     background-repeat: no-repeat
+    +media(620)
+        background-size: 210% 100%
+    +media(800)
+        background-size: 100% 100%
+    +media(1100)
+        background-size: 100% 100%
+    +media(1440)
+        background-size: 100% 110%
+    +media(2080)
+        background-size: 120% 170%
 .copy
     color: #ffffff
     background-color: #1a1a1a
     padding: 15px 0 3px 0
+.text-special-offer
+    min-height: 76px
 .order
-    position: relative
+    position: absolute
     color: #ffb700
     text-decoration: none
     text-transform: uppercase
     top: 13px
-    right: -10%
+    right: 15px
     &::before
         content: ''
         position: absolute
@@ -377,28 +406,43 @@ p.descript-sailing
     &:hover
         text-decoration: underline
 .about-us-company-cards
+    row-gap: 28px
     .last-col
         margin-bottom: 20px
 .cards-first-tours
     max-height: 271px
+.plans
+    padding-top: 45px
 .look-all-plans
     position: relative
     text-decoration: none
     font-size: 12px
     text-transform: uppercase
     color: #0099ff
+    width: auto
+    margin: auto
     &:after
         content: ''
         position: absolute
         width: 5px
-        top: 6px
-        margin-left: 10px
+        top: 5px
+        right: -15px
         height: 5px
         border-bottom: 2px solid #0099ff
         border-right: 2px solid #0099ff
         transform: rotate(-45deg)
     &:hover
         text-decoration: underline
+    &::before
+        content: ''
+        position: absolute
+        top: 1px
+        right: -20px
+        width: 13px
+        height: 13px
+        border: 2px solid #0099ff
+        border-radius: 50%
+    
 .burderBor
     z-index: 2
     position: fixed
@@ -421,14 +465,28 @@ p.descript-sailing
     +media(992)
         display: none
 .menu-sm 
-    background-color: #fff
+    background: linear-gradient(to top,rgba(#1e4fce,0.8),rgba(#184bda,0.8) 100%), url(../img/sea-sub.jpg) center
+    text-align: center
+    background-repeat: no-repeat
+    background-size: cover
     width: 100%
+    height: 100%
     padding: 10px 15px
-    border-radius: 10px
     position: fixed
-    display: none
     z-index: 3
-    border: 4px solid #798DC6
+    top: 15%
+    color: #fff
+    left: -100%
+    transition: 0.5s
+    ul
+        padding-top: 10%
+        padding-left: 0
+    a
+        font-size: 17px
+        margin-bottom: 10px
+        font-weight: 500
+        +media(530)
+            font-size: 21px
 .burger span, .burger span:before, .burger span:after 
     content: ""
     position: absolute
@@ -461,6 +519,19 @@ div.active span::after
     transition: 0.2s
 .visible
     display: block
+    left: 0
 .about-first-tour
-    column-gap: 5px
+    column-gap: 10px
     row-gap: 10px
+.description-add-info
+    min-height: 96px
+    color: #fefefe
+    padding-top: 20px
+    margin-bottom: 27px !important
+@media screen and (max-width:560px)
+    h2
+        font-size: 30px !important
+    .italic
+        font-size: 13px
+    .descript-sailing
+        font-size: 14px
