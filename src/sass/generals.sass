@@ -571,7 +571,8 @@ div.active span::after
   100%  
     box-shadow: 0 0 -10px #c4a300
 
-
+.card-img-top
+    height: 190px
 .button-glow 
     animation: glowing 5000ms infinite
     &:hover
@@ -581,6 +582,14 @@ div.active span::after
         position: relative
         &:before
             content: ''
+            position: absolute
+            width: 61px
+            height: 190px
+            background-color: #0099ff
+        &::after
+            content: url(../img/btour.png)
+            top: 79px
+            left: 10px
             position: absolute
 .sailing-descript-overflow
     max-height: 120px
