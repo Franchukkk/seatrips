@@ -31,20 +31,10 @@ a
         position: relative
 header
     padding-top: 34px
-    background: linear-gradient(to bottom,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 95%, rgba(#f5f8fa,1) 100%), url(../img/header.jpg) center
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 93%, rgba(#f5f8fa,1) 100%), url(../img/header.jpg) center
     background-repeat: no-repeat
-    background-size: 260% 100%
+    background-size: cover
     padding-bottom: 43px
-    +media(620)
-        background-size: 210% 100%
-    +media(800)
-        background-size: 150% 100%
-    +media(1100)
-        background-size: 100% 100%
-    +media(1440)
-        background-size: 100% 110%
-    +media(2080)
-        background-size: 100% 140%
     li
         list-style-type: none
     p
@@ -243,7 +233,7 @@ hr
     h2 
         font-size: 56px
         letter-spacing: 2px
-        line-height: 66px
+        line-height: 1.2em
         text-transform: uppercase
         color: #ffffff
         font-weight: 400
@@ -284,7 +274,9 @@ p.descript-sailing
     background-image: url(../img/quotes-man.png)
     margin: auto
     margin-top: 10px
-    margin-bottom: 20px
+.sailing 
+    .client
+        margin-bottom: 80px
 .quotes-img
     width: 43px
     height: 39px
@@ -386,20 +378,11 @@ p.descript-sailing
 .manager
     background-image: url(../img/ask-question.png)
 .footer
+    border-top: 2px solid #f4f7f9
     min-height: 400px
-    background: linear-gradient(to top,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 95%, rgba(#f5f8fa,1) 100%), url(../img/footer.jpg) center
-    background-size: 260% 150%
+    background: linear-gradient(to top,rgba(#f4f7f9,0) 65%,rgba(#f4f7f9,1) 92%, rgba(#f4f7f9,1) 100%), url(../img/footer.jpg) center
+    background-size: cover
     background-repeat: no-repeat
-    +media(620)
-        background-size: 210% 100%
-    +media(800)
-        background-size: 100% 100%
-    +media(1100)
-        background-size: 100% 100%
-    +media(1440)
-        background-size: 100% 110%
-    +media(2080)
-        background-size: 120% 170%
 .copy
     color: #ffffff
     background-color: #1a1a1a
@@ -454,7 +437,7 @@ p.descript-sailing
         content: ''
         position: absolute
         width: 5px
-        top: 5px
+        top: 4px
         right: -15px
         height: 5px
         border-bottom: 2px solid #0099ff
@@ -465,7 +448,7 @@ p.descript-sailing
     &::before
         content: ''
         position: absolute
-        top: 1px
+        top: 0px
         right: -20px
         width: 13px
         height: 13px
@@ -588,3 +571,31 @@ div.active span::after
     animation: glowing 5000ms infinite
     &:hover
         animation: none
+.bike 
+    .figure-special
+        position: relative
+        &:before
+            content: ''
+            position: absolute
+.sailing-descript-overflow
+    max-height: 120px
+    overflow-y: scroll
+    &::-webkit-scrollbar
+        width: 5px
+        height: 8px
+        background-color: transparent
+.about-us-company-cards
+    .width-95
+        max-width: 240px
+        +media(768)
+            max-width: 272px
+.special-month-offer
+    .figure-special
+        max-width: 240px
+        +media(768)
+            max-width: 270px
+.more-information
+    .more-details-cards
+        max-width: 240px
+        +media(768)
+            max-width: 270px

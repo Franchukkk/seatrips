@@ -91,12 +91,14 @@ html(lang="en")
                         .col-md-12.col-lg-6.sailing-descript 
                             h2 СПІЙМАЙ ХВИЛЮ
                                 p ЖИВИ ЯСКРАВО!
+                            
                             p.descript-sailing Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
                             a.btn(href="#") детальніше
                         .col-md-12.col-lg-6
                             .quotes.p-2 
                                 .quotes-img
-                                p.descript-sailing.p-4.m-0 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                                .sailing-descript-overflow
+                                    p.descript-sailing.p-4.m-0 Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
                                 p.descript-sailing.m-0.text-align-center Олег Набережний 
                                 p.descriptionFigure.text-align-center клієнт 
                                 .client
@@ -106,28 +108,28 @@ html(lang="en")
                         h2.text-uppercase.title-basic Спеціальні пропозиції тижня
                         p.italic Гарячі праозиції, по-швидше обирай і поїхали!
                     .row.g-3 
-                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                        .col-lg-3.col-md-6.col-sm-6.d-flex.justify-content-center
                             +cardsSpecial(cardsSpecialInfo.romantic)
-                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                        .col-lg-3.col-md-6.col-sm-6.d-flex.justify-content-center.bike
                             +cardsSpecial(cardsSpecialInfo.bikeTour)
-                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                        .col-lg-3.col-md-6.col-sm-6.d-flex.justify-content-center
                             +cardsSpecial(cardsSpecialInfo.toIslands)
-                        .col-lg-3.col-md-6.col-sm-12.d-flex.justify-content-center
+                        .col-lg-3.col-md-6.col-sm-6.d-flex.justify-content-center
                             +cardsSpecial(cardsSpecialInfo.surfRide)
                     hr
             .more-information 
                 .container.container-2100
                     .row.g-4
-                        .col-lg-3.col-md-6.col-sm-12.card-add.card-last-info
+                        .col-lg-3.col-md-6.col-sm-6.card-add.card-last-info
                             h2.title-basic додаткова <br> інформація
-                        .col-lg-3.col-md-6.col-sm-12.card-last-info
+                        .col-lg-3.col-md-6.col-sm-6.card-last-info
                             +moreCards(moreCards.workInfo)
-                        .col-lg-3.col-md-6.col-sm-12.more-food-card.card-last-info
+                        .col-lg-3.col-md-6.col-sm-6.more-food-card.card-last-info
                             +moreCards(moreCards.foodInfo)
-                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-lg-0.more-food-card-padding.card-last-info
-                            .ask-question 
+                        .col-lg-3.col-md-6.col-sm-6.more-food-card.m-lg-0.more-food-card-padding.card-last-info
+                            .ask-question
                                 i.regular задати питання
-                                small.descriptionFigure.ask-description Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання 
+                                p.descriptionFigure.ask-description.text-align-center  Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання 
                                 a.blue-text.blue-text-ask(href="#") +38 (050) 56 98 511
                                 small.regular.text-align-center.d-block Анна Миколаївна
                                 small.descriptionFigure.text-align-center.d-block консультант
