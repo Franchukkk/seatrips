@@ -311,7 +311,6 @@ p.descript-sailing
 .more-information
     margin-bottom: 80px
 .more-details-cards
-    width: 270px
     min-height: 270px
     margin: auto
     &:first-child
@@ -345,7 +344,7 @@ p.descript-sailing
 .card-add
     text-align: center
 .ask-question 
-    max-width: 268px
+    width: 242px
     margin: auto
     position: relative
     &:before,&:after
@@ -401,10 +400,11 @@ p.descript-sailing
     text-transform: uppercase
     top: 13px
     right: 15px
+    font-size: 13px
     &::before
         content: ''
         position: absolute
-        top: 5.5px
+        top: 3px
         right: -16px
         width: 12px
         height: 12px
@@ -413,7 +413,7 @@ p.descript-sailing
     &:after
         content: ''
         position: absolute
-        top: 9px
+        top: 6px
         right: -12px
         width: 5px
         height: 5px
@@ -541,10 +541,10 @@ div.active span::after
     column-gap: 10px
     row-gap: 10px
 .description-add-info
-    min-height: 96px
+    min-height: 115px
     color: #fefefe
     padding-top: 20px
-    margin-bottom: 27px !important
+    margin-bottom: 15px !important
 @media screen and (max-width:560px)
     h2
         font-size: 30px !important
@@ -603,4 +603,7 @@ div.active span::after
     .more-details-cards
         max-width: 240px
         +media(768)
-            max-width: 270px
+            width: 230px
+        h5 
+            +media(768)
+                font-size: 18px
