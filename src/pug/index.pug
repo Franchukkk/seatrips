@@ -4,7 +4,7 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title Туристична Компанія SEA TRIPS - Спіймай Хвилю Живи Яскраво!
         link(rel="stylesheet", href="css/styles.css")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,7 @@ html(lang="en")
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+        link(rel="shortcut icon", href="img/favicon.ico", type="image/x-icon")
     body 
         include components/mixins       
         header 
@@ -39,7 +40,7 @@ html(lang="en")
                 .text-align-center.header-center
                     h1 Морські пригоди
                     p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
-                    a.btn(href="#") детальніше
+                    a.btn.button-glow(href="#") детальніше
                 .text-align-center.header-bottom-center 
                     span.title-basic обери свій <br> план подорожі
                     p.italic Наша фірма -лідер на ринку у своїй сфері
@@ -117,13 +118,13 @@ html(lang="en")
             .more-information 
                 .container.container-2100
                     .row.g-4
-                        .col-lg-3.col-md-6.col-sm-12.card-add
+                        .col-lg-3.col-md-6.col-sm-12.card-add.card-last-info
                             h2.title-basic додаткова <br> інформація
-                        .col-lg-3.col-md-6.col-sm-12
+                        .col-lg-3.col-md-6.col-sm-12.card-last-info
                             +moreCards(moreCards.workInfo)
-                        .col-lg-3.col-md-6.col-sm-12.more-food-card
+                        .col-lg-3.col-md-6.col-sm-12.more-food-card.card-last-info
                             +moreCards(moreCards.foodInfo)
-                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-lg-0.more-food-card-padding
+                        .col-lg-3.col-md-6.col-sm-12.more-food-card.m-lg-0.more-food-card-padding.card-last-info
                             .ask-question 
                                 i.regular задати питання
                                 small.descriptionFigure.ask-description Скажіть доброго дня нашому консультанту,і ми з радістю відповімо на Ваші запитання 
