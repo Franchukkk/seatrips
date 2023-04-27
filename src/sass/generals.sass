@@ -31,9 +31,10 @@ a
         position: relative
 header
     padding-top: 34px
-    background: linear-gradient(to bottom,rgba(255,255,255,0) 65%,rgba(#f5f8fa,1) 93%, rgba(#f5f8fa,1) 100%), url(../img/header.jpg) center
+    background: linear-gradient(to bottom,rgba(#f4f7f9,0) 65%,rgba(#f4f7f9,1) 93%, rgba(#f4f7f9,1) 100%), url(../img/header.jpg) center
     background-repeat: no-repeat
     background-size: cover
+    border-bottom: 3px solid #f4f7f9
     padding-bottom: 43px
     li
         list-style-type: none
@@ -345,6 +346,8 @@ p.descript-sailing
     text-align: center
 .ask-question 
     width: 242px
+    +media(1200)
+        width: 270px
     margin: auto
     position: relative
     &:before,&:after
@@ -378,6 +381,7 @@ p.descript-sailing
         content: url(../img/tel.png)
         position: relative
         top: 2px
+        left: -5px
 
 .manager
     background-image: url(../img/ask-question.png)
@@ -387,6 +391,8 @@ p.descript-sailing
     background: linear-gradient(to top,rgba(#f4f7f9,0) 65%,rgba(#f4f7f9,1) 92%, rgba(#f4f7f9,1) 100%), url(../img/footer.jpg) center
     background-size: cover
     background-repeat: no-repeat
+    +media(2100)
+        min-height: 600px
 .copy
     color: #ffffff
     background-color: #1a1a1a
@@ -553,7 +559,9 @@ div.active span::after
     .descript-sailing
         font-size: 14px
 .more-food-card-padding
-    margin-top: 8px
+    margin-top: 16px
+    +media(576)
+        margin-top: 8px
     +media(992)
         padding-top: 7px
 @keyframes glowing 
@@ -573,6 +581,7 @@ div.active span::after
 
 .card-img-top
     height: 190px
+    object-fit: cover
 .button-glow 
     animation: glowing 5000ms infinite
     &:hover
@@ -611,6 +620,8 @@ div.active span::after
 .more-information
     .more-details-cards
         max-width: 240px
+        +media(1200)
+            min-width: 270px
         +media(768)
             width: 230px
         h5 
