@@ -2,7 +2,11 @@
 *
     margin: 0
     padding: 0
-
+html
+    +media(2100)
+        font-size: 23px
+.container-2100
+    max-width: 88rem
 body
     font-family: "Rubik"
     font-weight: 400
@@ -14,9 +18,9 @@ a
 .text-align-center
     text-align: center
 .navigation-header 
-    column-gap: 30px
+    column-gap: 2rem
     a
-        font-size: 14px
+        font-size: 0.9rem
         text-transform: uppercase
         color: #fff
         list-style: none
@@ -30,50 +34,50 @@ a
     +media(992)
         position: relative
 header
-    padding-top: 34px
-    background: linear-gradient(to bottom,rgba(#f4f7f9,0) 65%,rgba(#f4f7f9,1) 93%, rgba(#f4f7f9,1) 100%), url(../img/header.jpg) center
+    padding-top: 2.3rem
+    background: url(../img/header.webp) center
     background-repeat: no-repeat
     background-size: cover
-    padding-bottom: 43px
+    padding-bottom: 2.9rem
     li
         list-style-type: none
     p
-        max-width: 550px
+        max-width: 36.6rem
         margin: 0 auto
-        font-size: 16px
-        line-height: 24px
+        font-size: 1.1rem
+        line-height: 1.6rem
         color: #ffffff
         font-style: italic
-        margin-bottom: 30px
+        margin-bottom: 2rem
 .header-center
     position: relative
-    padding-bottom: 263px
+    padding-bottom: 17.5rem
     &::after
         content: ''
         position: absolute
         opacity: 0.2
         width: 90%
-        max-width: 410px
-        height: 41px
-        border: 4px solid #ffffff
+        max-width: 27.3rem
+        height: 2.7rem
+        border: 0.3rem solid #ffffff
         border-top: 0
         top:50%
         left:50%
-        margin-left: -205px 
-        top: 220px
-        height: 95px
+        margin-left: -13.6rem 
+        top: 14.6rem
+        height: 6.3rem
         display: none
         +media(560)
             display: inline-block
 a.btn
-    font-size: 16px
+    font-size: 1.1rem
     letter-spacing: 1px
     text-transform: uppercase
     color: #fdfcfb
-    border-radius: 23px
-    filter: drop-shadow(0px 4px 10.5px rgba(193,139,1,0.24))
+    border-radius: 1.5rem
+    filter: drop-shadow(0px 0.3rem 0.7rem rgba(193,139,1,0.24))
     background-color: #ffb700
-    padding: 10px 30px
+    padding: 0.6rem 2rem
     z-index: 1
     position: relative
     cursor: url(../img/cursor.cur), pointer
@@ -87,46 +91,46 @@ a.btn
 a.blue
     +btn
 .navigation
-    margin-bottom: 125px
+    margin-bottom: 8.3rem
 h1
-    font-size: 60px
+    font-size: 4rem
     position: relative
     letter-spacing: 1px
     line-height: 1.5em
     text-transform: uppercase
     color: #ffffff
     +media(465)
-        font-size: 72px
+        font-size: 4.8rem
     &::before,&::after
         content: ''
         position: absolute
         opacity: 0.2
         width: 100%
-        max-width: 410px
-        height: 41px
-        border: 4px solid #ffffff
+        max-width: 27.3rem
+        height: 2.7rem
+        border: 0.3rem solid #ffffff
         border-bottom: 0
         top:50%
         left:50%
-        margin-left: -205px 
+        margin-left: -13.6rem 
         display: none
-        top: -25px
+        top: -1.6rem
         +media(560)
             display: inline-block
 .italic
-    font-size: 16px
+    font-size: 1rem
     color: #333333
     font-style: italic
 a.slide-down 
-    width: 18px
-    height: 20px
+    width: 1.2rem
+    height: 1.3rem
     background-image: url(../img/angles-down-solid.svg)
     transition: 0.5s
     &:hover
         transform: scale(1.2)
 .regular
-    font-size: 18px
-    line-height: 26px
+    font-size: 1.2rem
+    line-height: 1.7rem
     color: #333333
     font-weight: 400
     font-style: normal
@@ -137,34 +141,37 @@ a.slide-down
         animation: 2s ease-in-out infinite shine
         background-color: #fff
     span
-        font-size: 24px
+        font-size: 1.6rem
         color: #0099ff
 .descriptionFigure
-    max-width: 229px
-    font-size: 13px
-    line-height: 19px
+    width: 95%
+    font-size: 0.8rem
+    line-height: 1.3rem
     color: #999999
     margin: auto
 .order-flex-bottom
     position: relative
 .title-basic
-    font-size: 36px
+    font-size: 2.4rem
     letter-spacing: 1px
-    line-height: 40px
+    line-height: 2.6rem
     text-transform: uppercase
     color: #333333
     font-weight: 400
 .width-95
-    max-width: 272px
+    max-width: 24rem
     margin: 0 auto
 .figure-about-us
     p
-        font-size: 13px
-        line-height: 19px
+        font-size: 0.9rem
+        line-height: 1.3rem
         color: #bbbbbb
     .btn
-        margin-top: 48px
-        margin-bottom: 19px
+        display: block
+        margin-top: 3.2rem
+        margin-bottom: 1.3rem
+        +media(576)
+            display: inline-block
 figure
     position: relative
 .best-offer:before
@@ -172,18 +179,19 @@ figure
     position: absolute
     width: 0
     height: 0
-    left: -12px
-    border-top: 61px solid #26cb15
-    border-right: 61px solid transparent
+    left: -0.8rem
+    border-top: 4.1rem solid #26cb15
+    border-right: 4.1rem solid transparent
 .best-offer:after
     content: ''
     position: absolute
-    width: 17px
-    height: 16px
-    left: -12px
+    width: 1.1rem
+    height: 1.1rem
+    left: -0.8rem
     background-image: url(../img/star.png)
+    background-size: cover
     left: 0px
-    top: 10px
+    top: 0.6rem
     animation: star 3s infinite
 @keyframes star 
     0%
@@ -196,106 +204,104 @@ figure
         transform: scale(1.3)
 hr
     border: none
-    border-top: 2px solid #dfe3e6
-    margin-bottom: 74px
-    margin-top: 71px
+    border-top: 0.2rem solid #dfe3e6
+    margin-bottom: 7.3rem
+    margin-top: 4.7rem
 .img-island
     margin: auto
     width: 100%
-    min-height: 270px
+    min-height: 18rem
     background-image: url(../img/island-nopeople.png)
     background-repeat: no-repeat
     background-size: cover
     background-position: center
 .description-island
-    margin-bottom: 34px
-    padding-top: 14px
+    margin-bottom: 2.3rem
+    padding-top: 0.9rem
 .card-price-island
     background-color: #edf1f4
-    min-height: 169px
+    min-height: 11.3rem
 .blue-text
-    font-size: 21px
-    line-height: 42px
+    font-size: 1.4rem
+    line-height: 2.8rem
     color: #0099ff
-    +media(1200)
-        font-size: 24px
-        line-height: 44px
 .island-about 
-    margin-bottom: 80px
+    margin-bottom: 5.3rem
 .sailing
-    padding-top: 90px
-    min-height: 503px
+    padding-top: 6rem
+    min-height: 33.5rem
     background: linear-gradient(rgba(#142f3f, 82%), rgba(#142f3f, 82%)), url(../img/sea-surfing-background.jpg) center
     background-size: cover
     background-repeat: no-repeat
     background-position-y: center
-    margin-bottom: 72px
+    margin-bottom: 4.8rem
 .sailing-descript
-    margin-bottom: 35px
+    margin-bottom: 2.3rem
     h2 
-        font-size: 56px
-        letter-spacing: 2px
+        font-size: 3.7rem
+        letter-spacing: 0.2rem
         line-height: 1.2em
         text-transform: uppercase
         color: #ffffff
         font-weight: 400
         +media(465)
-            font-size: 46px
+            font-size: 3rem
         p
             color: #0099ff
 p.descript-sailing
     color: #fff
     font-family: "PT Sans"      
-    margin-bottom: 32px
+    margin-bottom: 2.1rem
 .quotes
     text-align: center
     position: relative
     p.descript-sailing:first-child
-        padding-bottom: 17px !important
+        padding-bottom: 1.1rem !important
 .quotes:before,.quotes:after
     content:''
     display: inline-block
     position: absolute
     width: 32%
-    height: 235px
-    border: 4px solid #ffffff
+    height: 62%
+    border: 0.3rem solid #ffffff
     opacity: 0.2
 .quotes:before   
     border-right: 0
     left: 0
 .quotes:after
     border-left: 0
-    top: 8px
+    top: 0.5rem
     right: 0
 .client
-    width: 86px
-    height: 86px
+    width: 5.7rem
+    height: 5.7rem
     border-radius: 50%
     background-image: url(../img/quotes-man.png)
     margin: auto
-    margin-top: 10px
+    margin-top: 0.6rem
+    background-size: cover
 .sailing 
     .client
-        margin-bottom: 80px
+        margin-bottom: 5.3rem
 .quotes-img
-    width: 43px
-    height: 39px
+    width: 2.9rem
+    height: 2.6rem
     background-image: url(../img/quotes.png)
     background-repeat: no-repeat
     background-size: cover
     margin: auto
-    margin-top: -17px
+    margin-top: -1.1rem
 .special-month-offer
     .best-offer:before
         left: 0px
         top: 0
     .best-offer:after
-        left: 10px
-        top: 10px
+        left: 0.6rem
+        top: 0.6rem
 .figure-special
-    max-width: 270px
+    max-width: 18rem
     width: 100%
-    min-height: 355px
+    min-height: 23.7rem
     background-color: transparent
     transition: 0.5s
     &:hover
@@ -304,18 +310,18 @@ p.descript-sailing
         background-color: #fff
 @keyframes shine 
     0%,100%
-        box-shadow: -1px 0px 15px 1px rgba(#ffb700,0.5) 
+        box-shadow: -1px 0px 1rem 1px rgba(#707070,0.5) 
     25%
-        box-shadow: -10px 0px 25px 1px rgba(#ffb700,0.5)   
+        box-shadow: -0.6rem 0px 1.6rem 1px rgba(#707070,0.5)   
     50% 
-        box-shadow: 10px 0px 35px 1px rgba(#ffb700,0.5)
+        box-shadow: 0.6rem 0px 2.3rem 1px rgba(#707070,0.5)
     100%
-        box-shadow: -1px 0px 15px 1px rgba(#ffb700,0.5)
+        box-shadow: -1px 0px 1rem 1px rgba(#707070,0.5)
 
 .more-information
-    margin-bottom: 80px
+    margin-bottom: 5.3rem
 .more-details-cards
-    min-height: 270px
+    min-height: 18rem
     margin: auto
     &:first-child
         background: linear-gradient(rgba(#142f3f, 75%), rgba(#142f3f, 75%)), url(../img/more-information-house.jpg)
@@ -325,124 +331,120 @@ p.descript-sailing
         background: linear-gradient(rgba(#142f3f, 75%), rgba(#142f3f, 75%)), url(../img/more-information-food.jpg)
         background-position: center
 .download
-    font-size: 12px
+    font-size: 0.8rem
     text-transform: uppercase
     color: #ffb700
-    border-radius: 16px
+    border-radius: 1.1rem
     background-color: rgba(255,183,0,0)
-    border: 2px solid #ffb700
+    border: 0.2rem solid #ffb700
     text-decoration: none
-    padding: 4.5px 25px
+    padding: 0.3rem 1.6rem
     transition: 0.5s
     &:hover
         transform: scale(1.05)
     &::before
         content: url(../img/cloud.png)
-        padding-right: 5px 
+        padding-right: 0.3rem 
 .card-top
-    min-height: 75px
+    min-height: 4rem
 .document-image
-    margin-right: 17px
+    margin-right: 1.1rem
 .description-add-card
-    min-height: 120px
+    min-height: 11.3rem
 .card-add
     text-align: center
 .ask-question 
-    width: 242px
-    +media(1200)
-        width: 270px
+    width: 100%
     margin: auto
     position: relative
     &:before,&:after
         content: ''
         position: absolute
         width: 17%
-        height: 270px
-        border: 4px solid #ffb700
+        height: 18rem
+        border: 0.3rem solid #ffb700
     &:before
-        top: 17px
+        top: 1.1rem
         border-right: 0
     &:after
-        top: 17px
+        top: 1.1rem
         border-left: 0
         right: 0
 .ask-question
     i
         display: block
         text-align: center
-        margin-bottom: 30px
+        margin-bottom: 2rem
 .ask-description
     display: block
-    max-width: 150px
-    margin-bottom:10px
+    max-width: 10rem
+    margin-bottom:0.6rem
 .blue-text-ask
     display: block
-    font-size: 18px
+    font-size: 1.2rem
     text-decoration: none
     text-align: center
     &::before
         content: url(../img/tel.png)
         position: relative
-        top: 2px
-        left: -5px
+        top: 0.2rem
+        left: -0.3rem
 
 .manager
     background-image: url(../img/ask-question.png)
 .footer
-    border-top: 2px solid #f4f7f9
-    min-height: 400px
-    background: linear-gradient(to top,rgba(#f4f7f9,0) 65%,rgba(#f4f7f9,1) 92%, rgba(#f4f7f9,1) 100%), url(../img/footer.jpg) center
+    border-top: 0.2rem solid #f4f7f9
+    min-height: 26.6rem
+    background: url(../img/footer.webp) center
     background-size: cover
     background-repeat: no-repeat
-    +media(2100)
-        min-height: 600px
 .copy
     color: #ffffff
     background-color: #1a1a1a
-    padding: 15px 0 3px 0
+    padding: 1rem 0 0.2rem 0
 .text-special-offer
-    min-height: 76px
+    min-height: 5rem
 .order
     position: absolute
     color: #ffb700
     text-decoration: none
     text-transform: uppercase
-    top: 13px
-    right: 15px
-    font-size: 13px
+    top: 0.9rem
+    right: 1rem
+    font-size: 0.9rem
     &::before
         content: ''
         position: absolute
-        top: 3px
-        right: -16px
-        width: 12px
-        height: 12px
+        top: 0.2rem
+        right: -1.1rem
+        width: 0.8rem
+        height: 0.8rem
         border: 2px solid #ffb700
         border-radius: 50%
     &:after
         content: ''
         position: absolute
-        top: 6px
-        right: -12px
-        width: 5px
-        height: 5px
+        top: 0.45rem
+        right: -0.84rem
+        width: 0.3rem
+        height: 0.3rem
         border-bottom: 2px solid #ffb700
         border-right: 2px solid #ffb700
         transform: rotate(-45deg)
     &:hover
         text-decoration: underline
 .about-us-company-cards
-    row-gap: 28px
+    row-gap: 2.5rem
     .last-col
-        margin-bottom: 20px
+        margin-bottom: 1.3rem
 .cards-first-tours
-    max-height: 271px
+    max-height: 18rem
 .plans
-    padding-top: 45px
+    padding-top: 4.3rem
 .look-all-plans
     position: relative
     text-decoration: none
-    font-size: 12px
+    font-size: 0.8rem
     text-transform: uppercase
     color: #0099ff
     width: auto
@@ -450,10 +452,10 @@ p.descript-sailing
     &:after
         content: ''
         position: absolute
-        width: 5px
-        top: 4px
-        right: -15px
-        height: 5px
+        width: 0.3rem
+        top: 0.3rem
+        right: -1rem
+        height: 0.3rem
         border-bottom: 2px solid #0099ff
         border-right: 2px solid #0099ff
         transform: rotate(-45deg)
@@ -463,9 +465,9 @@ p.descript-sailing
         content: ''
         position: absolute
         top: 0px
-        right: -20px
-        width: 13px
-        height: 13px
+        right: -1.3rem
+        width: 0.9rem
+        height: 0.9rem
         border: 2px solid #0099ff
         border-radius: 50%
     
@@ -474,19 +476,19 @@ p.descript-sailing
     position: fixed
     right: 4%
     display: block
-    border: 2px solid #1147c3
+    border: 0.2rem solid #1147c3
     background-color: #1147c3
-    border-radius: 5px
-    width: 35px
-    height: 35px
+    border-radius: 0.3rem
+    width: 2.3rem
+    height: 2.3rem
     +media(992)
         display: none
 .burger 
-    top: 14px
-    left: -8.5px
+    top: 0.9rem
+    left: -0.6rem
     position: relative
     display: block
-    width: 25px
+    width: 1.6rem
     right: 5%
     +media(992)
         display: none
@@ -497,7 +499,7 @@ p.descript-sailing
     background-size: cover
     width: 100%
     height: 100%
-    padding: 10px 15px
+    padding: 0.6rem 1rem
     position: fixed
     z-index: 3
     top: 0
@@ -505,32 +507,32 @@ p.descript-sailing
     left: -100%
     transition: 0.5s
     ul
-        padding-top: 140px
+        padding-top: 12.6rem
         padding-left: 0
     a
-        font-size: 17px
-        margin-bottom: 10px
+        font-size: 1.1rem
+        margin-bottom: 0.6rem
         font-weight: 500
         +media(530)
-            font-size: 21px
+            font-size: 1.4rem
 .burger span, .burger span:before, .burger span:after 
     content: ""
     position: absolute
     background-color: #fff
     width: 100%
-    height: 2px
+    height: 0.2rem
     transition: 0.3s
 
 .burger span:before 
-    top: -9px
+    top: -0.6rem
 
 .burger span:after
-    bottom: -9px
+    bottom: -0.6rem
 
 .active
     display: block
     padding: 0
-    padding-bottom: 8px
+    padding-bottom: 0.5rem
     span
         background-color: transparent
 
@@ -547,43 +549,43 @@ div.active span::after
     display: block
     left: 0
 .about-first-tour
-    column-gap: 10px
-    row-gap: 10px
+    column-gap: 0.6rem
+    row-gap: 0.6rem
 .description-add-info
-    min-height: 115px
+    min-height: 8rem
     color: #fefefe
-    padding-top: 20px
-    margin-bottom: 15px !important
-@media screen and (max-width:560px)
+    padding-top: 1.3rem
+    margin-bottom: 1rem !important
+@media screen and (max-width:54rem)
     h2
-        font-size: 30px !important
+        font-size: 2rem !important
     .italic
-        font-size: 13px
+        font-size: 0.9rem
     .descript-sailing
-        font-size: 14px
+        font-size: 0.9rem
 .more-food-card-padding
-    margin-top: 16px
+    margin-top: 1.1rem
     +media(576)
-        margin-top: 8px
+        margin-top: 0.5rem
     +media(992)
-        padding-top: 7px
+        padding-top: 0.5rem
 @keyframes glowing 
   0%  
     transform: rotate(0)
-    box-shadow: 0 0 -10px #c4a300
+    box-shadow: 0 0 -0.6rem #c4a300
   25%  
     transform: rotate(-5deg)  
   40%  
-    box-shadow: 0 0 20px #c4a300
+    box-shadow: 0 0 1.3rem #c4a300
   50%
     transform: rotate(5deg)  
   60%  
-    box-shadow: 0 0 20px #c4a300
+    box-shadow: 0 0 1.3rem #c4a300
   100%  
-    box-shadow: 0 0 -10px #c4a300
+    box-shadow: 0 0 -0.6rem #c4a300
 
 .card-img-top
-    height: 190px
+    height: 12.6rem
 img
     object-fit: cover
 .button-glow 
@@ -596,38 +598,37 @@ img
         &:before
             content: ''
             position: absolute
-            width: 61px
-            height: 190px
+            width: 4.1rem
+            height: 12.6rem
             background-color: #0099ff
         &::after
             content: url(../img/btour.png)
-            top: 79px
-            left: 10px
+            top: 5.3rem
+            left: 0.8rem
             position: absolute
-.sailing-descript-overflow
-    max-height: 120px
-    overflow-y: scroll
     &::-webkit-scrollbar
-        width: 5px
-        height: 8px
+        width: 0.3rem
+        height: 0.5rem
         background-color: transparent
 .about-us-company-cards
     .width-95
-        max-width: 240px
+        max-width: 22.6rem
         +media(768)
-            max-width: 272px
+            max-width: 17rem
 .special-month-offer
     .figure-special
-        max-width: 240px
+        max-width: 22.6rem
         +media(768)
-            max-width: 270px
+            max-width: 18rem
 .more-information
     .more-details-cards
-        max-width: 240px
+        width: 100%
         +media(1200)
-            min-width: 270px
-        +media(768)
-            width: 230px
+            width: 100%
+            max-width: 17rem
         h5 
             +media(768)
-                font-size: 18px
+                font-size: 1.08rem
+@media screen and (max-width: 425px)
+    html
+        font-size: 13px
