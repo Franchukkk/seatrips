@@ -64,11 +64,13 @@ header
         top:50%
         left:50%
         margin-left: -13.6rem 
-        top: 14.6rem
+        top: 20rem
         height: 6.3rem
         display: none
         +media(560)
             display: inline-block
+        +media(768)
+            top: 14.6rem
 a.btn
     font-size: 1.1rem
     letter-spacing: 1px
@@ -131,7 +133,6 @@ a.slide-down
         transform: scale(1.2)
 .regular
     font-size: 1.2rem
-    line-height: 1.7rem
     color: #333333
     font-weight: 400
     font-style: normal
@@ -189,7 +190,7 @@ figure
     width: 1.1rem
     height: 1.1rem
     left: -0.8rem
-    background-image: url(../img/star.png)
+    background-image: url(../img/star.svg)
     background-size: cover
     left: 0px
     top: 0.6rem
@@ -221,7 +222,9 @@ hr
     padding-top: 0.9rem
 .card-price-island
     background-color: #edf1f4
-    min-height: 11.3rem
+    min-height: 8rem
+    +media(991)
+        min-height: 11.3rem
 .blue-text
     font-size: 1.4rem
     line-height: 2.8rem
@@ -285,9 +288,9 @@ p.descript-sailing
     .client
         margin-bottom: 5.3rem
 .quotes-img
-    width: 2.9rem
+    width: 3rem
     height: 2.6rem
-    background-image: url(../img/quotes.png)
+    background-image: url(../img/quotes.svg)
     background-repeat: no-repeat
     background-size: cover
     margin: auto
@@ -299,6 +302,11 @@ p.descript-sailing
     .best-offer:after
         left: 0.6rem
         top: 0.6rem
+    .regular
+        +media(768)
+            min-height: 46px
+        +media(1174)
+            min-height: auto
 .figure-special
     max-width: 18rem
     width: 100%
@@ -349,6 +357,8 @@ p.descript-sailing
 .card-top
     min-height: 4rem
 .document-image
+    height: 3.5rem
+    width: 2.5rem
     margin-right: 1.1rem
 .description-add-card
     min-height: 11.3rem

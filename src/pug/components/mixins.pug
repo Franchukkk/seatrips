@@ -60,7 +60,7 @@ mixin cards(oneCard)
                     p #{oneText}
 mixin menu(menu, colorTheme="light")
     .navigation
-        .container
+        .container-header
             .row.align-items-baseline
                 .col-2
                     .logo#logo
@@ -137,7 +137,7 @@ mixin cardsSpecial(cardsSpecial)
     let moreCards = {
         workInfo: {
             img: "img/more-information-house.jpg",
-            ico: "img/document.png",
+            ico: "img/file.svg",
             alt: "document",
             title: "Графік роботи готелів.xls",
             fileWeight: "Розмір файла: 10Mb",
@@ -147,7 +147,7 @@ mixin cardsSpecial(cardsSpecial)
         },
         foodInfo: {
             img: "img/more-information-food.jpg",
-            ico: "img/document.png",
+            ico: "img/file.svg",
             alt: "document",
             title: "Інформація про харчування.xls",
             fileWeight: "Розмір файла: 10Mb",
