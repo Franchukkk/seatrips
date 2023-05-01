@@ -347,13 +347,21 @@ p.descript-sailing
     background-color: rgba(255,183,0,0)
     border: 0.2rem solid #ffb700
     text-decoration: none
-    padding: 0.3rem 1.6rem
+    padding: 0.3rem 1.6rem 0.3rem 1.8rem
     transition: 0.5s
+    position: relative
     &:hover
         transform: scale(1.05)
     &::before
-        content: url(../img/cloud.png)
+        content: ''
+        position: absolute
+        width: 1rem
+        height: 0.9rem
+        background: url(../img/cloud.svg)
+        background-size: cover
         padding-right: 0.3rem 
+        left: 8px
+        top: 7px
 .card-top
     min-height: 4rem
 .document-image
@@ -391,15 +399,18 @@ p.descript-sailing
     max-width: 10rem
     margin-bottom:0.6rem
 .blue-text-ask
-    display: block
     font-size: 1.2rem
     text-decoration: none
     text-align: center
+    position: relative
     &::before
-        content: url(../img/tel.png)
-        position: relative
-        top: 0.2rem
-        left: -0.3rem
+        content: ''
+        position: absolute
+        width: 17px
+        height: 16px
+        top: 0.7rem
+        background: url(../img/tel.svg)
+        left: -1.3rem
 
 .manager
     background-image: url(../img/ask-question.png)
@@ -616,7 +627,7 @@ img
             content: ''
             top: 5.3rem
             width: 2.6rem
-            height: 2.35rem
+            height: 2.4rem
             left: 0.8rem
             position: absolute
             background-image: url(../img/bike.svg)
